@@ -17,6 +17,9 @@ body {
   font-variant: small-caps;
 }
 
+.teaser .hero-body video {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
 
 .teaser .hero-body {
   padding-top: 0;

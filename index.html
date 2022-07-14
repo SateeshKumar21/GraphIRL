@@ -155,8 +155,8 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <center>
-        <video id="teaser" autoplay muted loop playsinline controls height="100%">
-          <source src="videos/GraphIRL Video.mp4"
+        <video id="teaser" autoplay muted loop playsinline width="100%">
+          <source src="videos/teaser.mp4"
                   type="video/mp4">
         </video>
       </center>
@@ -168,51 +168,71 @@
   </div>
 </section>
 
-<section class="section">
-  <div class="container is-max-desktop">
+<section class="hero is-light is-small">
+  <div class="hero-body container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
             Research on Inverse Reinforcement Learning (IRL) from third-person videos has shown encouraging results on removing the need for manual reward design for robotic tasks. However, most prior works are still limited by training from a relatively restricted domain of videos. In this paper, we argue that the true potential of third-person IRL lies in increasing the diversity of videos for better scaling. To learn a reward function from diverse videos, we propose to perform graph abstraction on the videos followed by temporal matching in the graph space to measure the task progress. 
           </p>
           <p>
-            Our insight is that a task can be described by entity interactions that form a graph, and this graph abstraction can help remove irrelevant information such as textures, resulting in more robust reward functions. We evaluate our approach, <em>GraphIRL</em>, on cross-embodiment learning in X-MAGICAL and learning from human demonstrations for real-robot manipulation. We show significant improvements in robustness to diverse video demonstrations over previous approaches, and even achieve better results than manual reward design on a real robot pushing task.
+            Our insight is that a task can be described by entity interactions that form a graph, and this graph abstraction can help remove irrelevant information such as textures, resulting in more robust reward functions. We evaluate our approach, <em>GraphIRL</em>, by learning from human demonstrations for real-robot manipulation and via cross-embodiment learning in X-MAGICAL. We show significant improvements in robustness to diverse video demonstrations over previous approaches, and even <b>achieve better results than manual reward design on real robot tasks</b>.
           </p>
+          <br>
         </div>
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe
+            width="560"
+            height="315"
+            src="videos/GraphIRL Video.mp4"
+            title="YouTube Video Player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <br>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Method. -->
+    <!--/ Method. -->
+  </div>
+</section>
+
+<!-- Method-->
+<section class="section">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Method</h2>
         <div class="content has-text-justified">
           <p>
             <em>GraphIRL</em> is a self-supervised method for learning a visually invariant reward function directly from a set of diverse third-person video demonstrations via a graph abstraction. Our framework builds an object-centric graph abstraction from video demonstrations and then learns an embedding space that captures task progression by exploiting the temporal cue in the videos. This embedding space is then used to construct a <em>domain invariant</em> and <em>embodiment invariant</em> reward function which can be used to train any standard reinforcement learning algorithm.
           </p>
         </div>
-        <center>
+        <!-- <center>
           <video id="teaser" autoplay muted loop playsinline controls height="100%">
             <source src="videos/GraphIRL Method.mp4"
                     type="video/mp4">
           </video>
-        </center>
-        <div class="content has-text-justified">
-          <p>
-            <br>
-            We have have 3 robotic manipulation tasks for which we gathered human demonstrations. From left-to-right, we have <em>Task (a): Reach</em>, <em>Task (b): Push</em>, and <em>Task (c): Peg in Box</em>. The video demonstrations have human hands completing the tasks with visually diverse goal regions, objects, and start-end locations for the human demonstrator.
-          </p>
-        </div>
+        </center> -->
         <center>
           <video id="teaser" autoplay muted loop playsinline controls height="100%">
             <source src="videos/GraphIRL 3x6 Human Demos.mp4"
                     type="video/mp4">
           </video>
         </center>
+        <div class="content has-text-justified">
+          <p>
+            We have have 3 robotic manipulation tasks for which we gathered human demonstrations. From left-to-right, we have <em>Task (a): Reach</em>, <em>Task (b): Push</em>, and <em>Task (c): Peg in Box</em>. The video demonstrations have human hands completing the tasks with visually diverse goal regions, objects, and start-end locations for the human demonstrator.
+          </p>
+        </div>
       </div>
     </div>
     <!--/ Method. -->
@@ -261,100 +281,14 @@
     </div>
     <!--/ Sim2Real. -->
 
-    <!-- Concurrent Work.
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
   <!-- </div> -->
 </section>
-
-<!-- X-MAGICAL-->
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- X-MAGICAL. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">X-MAGICAL Benchmark</h2>
-        <div class="content has-text-justified">
-          <p>
-            In addition to evaluating <em>GraphIRL</em> on a range of robotic manipulation tasks, we also apply our method to the <em>X-MAGICAL</em> benchmark.
-            With X-MAGICAL, we measure the performance of vision-based IRL baselines in the <strong>cross-embodiment cross-environment</strong> setting. For the purposes of
-            our experiments, we leverage 2 variants of the X-MAGICAL environment: <em>standard</em> and <em>diverse</em>.
-          </p>
-          <center>
-            <video id="teaser" autoplay muted loop playsinline controls height="100%">
-              <source src="videos/GraphIRL X-MAGICAL.mp4"
-                      type="video/mp4">
-            </video>
-          </center>
-          <p>
-            The goal for the agents in X-MAGICAL is to push three objects towards a static goal region. In the <strong>cross-embodiment cross-environment</strong> setting, we learn a reward function with <em>GraphIRL</em> on three of the four embodiments in one variant of the X-MAGICAL environment, and during RL, we use the learned reward function on an unseen embodiment in a visually different version of the environment.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ X-MAGICAL. -->
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Task Progress w/ Success -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Measuring Progress of Successful Tasks</h2>
-          <video id="sim" autoplay controls muted loop playsinline height="100%">
-            <source src="videos/GraphIRL Task Success.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Task Progress w/ Failure -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Measuring Progress of Unsuccessful Tasks</h2>
-          <video id="sim" autoplay controls muted loop playsinline height="100%">
-            <source src="videos/GraphIRL Task Failure.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-
-      </div>
-    </div>
 
 <!-- Qualitative Comparison-->
 <section class="section">
   <div class="container is-max-desktop">
-    <!-- X-MAGICAL. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-full-width">
         <h2 class="title is-3">Real Robot Experiments</h2>
         <div class="content has-text-justified">
           <center>
@@ -381,6 +315,62 @@
       </div>
     </div>
     <!--/ Qualitative Comparison. -->
+  </div>
+</section>
+
+<!-- Qualitative Comparison-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Qualitative Analysis of Learned Reward</h2>
+        <div class="content has-text-justified">
+          <center>
+            <video id="teaser" autoplay muted loop playsinline controls height="100%">
+              <source src="videos/GraphIRL Task Success.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+
+          <center>
+            <video id="teaser" autoplay muted loop playsinline controls height="100%">
+              <source src="videos/GraphIRL Task Failure.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+        </div>
+      </div>
+    </div>
+    <!--/ Qualitative Comparison. -->
+  </div>
+</section>
+
+<!-- X-MAGICAL-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- X-MAGICAL. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">X-MAGICAL Benchmark</h2>
+        <div class="content has-text-justified">
+          <p>
+            In addition to evaluating <em>GraphIRL</em> on a range of robotic manipulation tasks, we also apply our method to the <em>X-MAGICAL</em> benchmark.
+            With X-MAGICAL, we measure the performance of vision-based IRL baselines in the <strong>cross-embodiment cross-environment</strong> setting. For the purposes of
+            our experiments, we leverage 2 variants of the X-MAGICAL environment: <em>standard</em> and <em>diverse</em>.
+          </p>
+          <center>
+            <video id="teaser" autoplay muted loop playsinline controls height="100%">
+              <source src="videos/GraphIRL X-MAGICAL.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+          <p>
+            The goal for the agents in X-MAGICAL is to push three objects towards a static goal region. In the <strong>cross-embodiment cross-environment</strong> setting, we learn a reward function with <em>GraphIRL</em> on three of the four embodiments in one variant of the X-MAGICAL environment, and during RL, we use the learned reward function on an unseen embodiment in a visually different version of the environment.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ X-MAGICAL. -->
   </div>
 </section>
 
