@@ -197,18 +197,35 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Method</h2>
-        <div class="content has-text-justified">
-          <p>
-            <em>GraphIRL</em> is a self-supervised method for learning a visually invariant reward function directly from a set of diverse third-person video demonstrations via a graph abstraction. Our framework builds an object-centric graph abstraction from video demonstrations and then learns an embedding space that captures task progression by exploiting the temporal cue in the videos. This embedding space is then used to construct a <em>domain invariant</em> and <em>embodiment invariant</em> reward function which can be used to train any standard reinforcement learning algorithm.
-          </p>
+        <h2 class="title is-3">Graph Inverse Reinforcement Learning (GraphIRL)</h2>
+
+        <div class="columns is-centered">
+          <div class="column is-full-width">
+            <tr>
+              <td>
+                <br>
+                <div class="columns is-centered has-text-centered">
+                  <img src="static/images/GraphIRL Method.png" style="width: 85%;"></img>
+                </div>
+              </td>
+            </tr>
+            <div class="is-vcentered interpolation-panel">
+              <div class="content has-text-justified">
+                <p style = "font-size: 18px">
+                  <em>GraphIRL</em> is a self-supervised method for learning a visually invariant reward function directly from a set of diverse third-person video demonstrations via a graph abstraction. Our framework builds an object-centric graph abstraction from video demonstrations and then learns an embedding space that captures task progression by exploiting the temporal cue in the videos. This embedding space is then used to construct a <em>domain invariant</em> and <em>embodiment invariant</em> reward function which can be used to train any standard reinforcement learning algorithm.
+                </p>
+              </div>
+            </div>
         </div>
+        </div>
+
         <center>
           <video id="teaser" autoplay muted loop playsinline controls height="100%">
             <source src="videos/GraphIRL 3x6 Human Demos.mp4"
                     type="video/mp4">
           </video>
         </center>
+
         <div class="content has-text-justified">
           <p>
             We have have 3 robotic manipulation tasks for which we gathered human demonstrations. From left-to-right, we have <em>Task (a): Reach</em>, <em>Task (b): Push</em>, and <em>Task (c): Peg in Box</em>. The video demonstrations have human hands completing the tasks with visually diverse goal regions, objects, and start-end locations for the human demonstrator.
@@ -307,15 +324,22 @@
         <h2 class="title is-3">Qualitative Analysis of Learned Reward</h2>
         <div class="content has-text-justified">
           <center>
-            <video id="teaser" autoplay muted loop playsinline controls height="100%">
-              <source src="videos/GraphIRL Task Success.mp4"
+            <video id="teaser" autoplay muted loop playsinline controls height="100%" style="border-radius: 10px">
+              <source src="videos/GraphIRL-Task-Success-1.mp4"
                       type="video/mp4">
             </video>
           </center>
 
           <center>
-            <video id="teaser" autoplay muted loop playsinline controls height="100%">
-              <source src="videos/GraphIRL Task Failure.mp4"
+            <video id="teaser" autoplay muted loop playsinline controls height="100%" style="border-radius: 10px">
+              <source src="videos/GraphIRL-Task-Success-2.mp4"
+                      type="video/mp4">
+            </video>
+          </center>
+
+          <center>
+            <video id="teaser" autoplay muted loop playsinline controls height="100%" style="border-radius: 10px">
+              <source src="videos/GraphIRL-Task-Failure.mp4"
                       type="video/mp4">
             </video>
           </center>
@@ -340,7 +364,7 @@
             our experiments, we leverage 2 variants of the X-MAGICAL environment: <em>standard</em> and <em>diverse</em>.
           </p>
           <center>
-            <video id="teaser" autoplay muted loop playsinline controls height="100%">
+            <video id="teaser" autoplay muted loop playsinline controls height="100%" style="border-radius: 10px">
               <source src="videos/GraphIRL X-MAGICAL.mp4"
                       type="video/mp4">
             </video>
@@ -370,33 +394,22 @@
 
 <footer class="footer">
   <div class="container">
-    <!-- <div class="content has-text-centered">
+    <div class="content has-text-centered">
       <a class="icon-link"
-         href="https://homes.cs.washington.edu/~kpar/nerfies/videos/nerfies_paper.pdf">
+         href="https://arxiv.org/pdf/2207.14299.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://sateeshkumar21.github.io/GraphIRL/" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+          <p>This website template is borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>.</p>
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </footer>
 
