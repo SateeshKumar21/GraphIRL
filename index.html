@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Inverse Reinforcement Learning from Diverse Third-Person Videos via Graph Abstraction.">
+        content="Inverse Reinforcement Learning from Diverse Third-Person Videos via Graph Abstraction">
   <meta name="keywords" content="Inverse Reinforcement Learning, Third-Person Videos, Graph Network">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GraphIRL</title>
@@ -113,7 +113,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=ts0e2HHp3Lk"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -121,7 +121,7 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
+              </span> -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://sateeshkumar21.github.io/GraphIRL"
@@ -158,10 +158,6 @@
                   type="video/mp4">
         </video>
       </center>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">GraphIRL</span> uses a <strong>graph abstraction</strong> to learn a reward function
-        from diverse 3rd-person human videos.
-      </h2>
     </div>
   </div>
 </section>
@@ -320,8 +316,14 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+      <div class="column is-full-width has-text-justified">
         <h2 class="title is-3">Qualitative Analysis of Learned Reward</h2>
+        <div class="content has-text-justified">
+          <p>
+            We visualize the learned reward for the <i>Peg in Box</i> task in 2 success videos and 1 failure video.
+          </p>
+          <br>
+        </div>
         <div class="content has-text-justified">
           <center>
             <video autoplay muted loop playsinline width="100%" style="border-radius: 10px">
@@ -329,14 +331,12 @@
                       type="video/mp4">
             </video>
           </center>
-
           <center>
             <video autoplay muted loop playsinline width="100%" style="border-radius: 10px">
               <source src="videos/GraphIRL-Task-Success-2.mp4"
                       type="video/mp4">
             </video>
           </center>
-
           <center>
             <video autoplay muted loop playsinline width="100%" style="border-radius: 10px">
               <source src="videos/GraphIRL-Task-Failure.mp4"
@@ -379,17 +379,39 @@
   </div>
 </section>
 
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
-    <h2 class="title">Citation</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
-}</code></pre>
+
+    <div style="margin: auto; margin-bottom: 64px; text-align: center;">
+      <h2>Paper</h2>
+      S. Kumar, J. Zamora*, N. Hansen*, R. Jangir, X. Wang<br/>
+      <span class="bold">Inverse Reinforcement Learning from Diverse Third-Person Videos via Graph Abstraction</span><br/><br/>
+      arXiv, 2022<br/><br/>
+      <div class="page" style="background-image: url(static/thumbnails/0.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/1.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/2.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/3.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/4.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/5.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/6.png);"></div>
+      <div class="page" style="background-image: url(static/thumbnails/7.png);"></div>
+      <div style="margin: auto; margin-top: 32px;">
+        <a href="https://arxiv.org/abs/2207.14299">View on arXiv</a>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <h2>Citation</h2>
+    </div>
+    <p>If you use our method or code in your research, please consider citing the paper as follows:</p>
+    <pre><code>@article{kumar2022inverse,
+      title={Inverse Reinforcement Learning from Diverse Third-Person Videos via Graph Abstraction},
+      author={Kumar, Sateesh and Zamora, Jonathan and Hansen, Nicklas and Jangir, Rishabh and Wang, Xiaolong},
+      journal={arXiv preprint arXiv:2207.14299},
+      year={2022}
+    }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
